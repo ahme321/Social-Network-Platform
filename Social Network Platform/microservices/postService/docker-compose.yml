@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  postservice:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    environment:
+      - REDIS_ADDR=redis:6379
+      - MONGO_URI=mongodb://mongo:27017/postService
+      - MONGO_DB=postService
+      - POST_SERVICE_PORT=3000
+
+    depends_on:
+      - mongo
+      - redis
+
+  mongo:
+    image: mongo:4.4
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=postService
+  
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+
+
+  rabbitmq:
+    image: rabbitmq:4-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672" # RabbitMQ default port
+      - "15672:15672" # RabbitMQ management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+
+volumes:
+  mongo-data:

@@ -1,0 +1,156 @@
+[
+{
+    "userId": "1",
+    "content": "Just released my new AI project! Check out the GitHub repo #MachineLearning #AI",
+    "category": "Technology",
+    "comments": [
+    {
+        "userId": "2",
+        "content": "This looks amazing! Can you explain the architecture?"
+    }
+    ]
+},
+{
+    "userId": "2",
+    "content": "10-minute morning yoga routine that changed my life 🧘‍♀️ #Fitness #Wellness",
+    "category": "Health & Fitness",
+    "likes": 24
+},
+{
+    "userId": "10",
+    "content": "Market analysis Q3: Tech stocks show surprising resilience despite economic headwinds",
+    "category": "Business",
+    "comments": [
+    {
+        "userId": "7",
+        "content": "Do you think this will continue in Q4?"
+    },
+    {
+        "userId": "5",
+        "content": "Great analysis! Shared with my team"
+    }
+    ]
+},
+{
+    "userId": "3",
+    "content": "Just tried this new ramen place downtown - best broth I've ever had! 🍜 #Foodie",
+    "category": "Food & Cooking",
+    "likes": 42
+},
+{
+    "userId": "4",
+    "content": "Breaking: New study reveals benefits of intermittent fasting for cognitive function",
+    "category": "Science",
+    "likes": 87
+},
+  {
+    "userId": "9",
+    "content": "My watercolor painting process from sketch to final piece 🎨 #ArtProcess",
+    "category": "Art & Design",
+    "comments": [
+      {
+        "userId": "8",
+        "content": "The color blending is incredible!"
+      }
+    ]
+  },
+  {
+    "userId": "3",
+    "content": "Travel tip: Always carry a portable charger - saved me in Barcelona last week! #TravelHacks",
+    "category": "Travel",
+    "likes": 33
+  },
+  {
+    "userId": "1",
+    "content": "React 19 features we're most excited about at our startup #WebDev",
+    "category": "Technology",
+    "likes": 56
+  },
+  {
+    "userId": "2",
+    "content": "How we reduced AWS costs by 40% through infrastructure optimization",
+    "category": "Business",
+    "comments": [
+      {
+        "userId": "9",
+        "content": "Would love a detailed write-up on this!"
+      }
+    ]
+  },
+  {
+    "userId": "6",
+    "content": "5-minute Mediterranean salad recipe - perfect for summer! 🥗 #HealthyEating",
+    "category": "Food & Cooking",
+    "likes": 29
+  },
+  {
+    "userId": "8",
+    "content": "The neuroscience of habit formation - why 21 days is a myth",
+    "category": "Science",
+    "likes": 64
+  },
+  {
+    "userId": "3",
+    "content": "Behind-the-scenes at the championship game 🏈 #SportsPhotography",
+    "category": "Sports",
+    "likes": 112
+  },
+  {
+    "userId": "4",
+    "content": "Why we switched from MongoDB to PostgreSQL for our analytics platform",
+    "category": "Technology",
+    "comments": [
+      {
+        "userId": "1",
+        "content": "What was your biggest challenge in migration?"
+      }
+    ]
+  },
+  {
+    "userId": "10",
+    "content": "Minimalist UI design principles that increased our conversion rate by 27%",
+    "category": "Art & Design",
+    "likes": 78
+  },
+  {
+    "userId": "7",
+    "content": "Hidden gems in Kyoto - places most tourists never see 🏯 #TravelJapan",
+    "category": "Travel",
+    "likes": 91
+  },
+  {
+    "userId": "5",
+    "content": "New research: Plant-based diets may reduce risk of chronic diseases",
+    "category": "Health & Fitness",
+    "likes": 45
+  },
+  {
+    "userId": "9",
+    "content": "Case study: How we grew our SaaS startup to $10K MRR in 6 months",
+    "category": "Business",
+    "comments": [
+      {
+        "userId": "7",
+        "content": "Incredible growth! What was your main channel?"
+      }
+    ]
+  },
+  {
+    "userId": "8",
+    "content": "The future of quantum computing - interview with a Google researcher",
+    "category": "Technology",
+    "likes": 103
+  },
+  {
+    "userId": "4",
+    "content": "3D animation workflow from concept to final render #DigitalArt",
+    "category": "Art & Design",
+    "likes": 57
+  },
+  {
+    "userId": "6",
+    "content": "Why curiosity is the most important skill for developers",
+    "category": "Education",
+    "likes": 68
+  }
+]

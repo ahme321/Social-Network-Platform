@@ -1,0 +1,103 @@
+openapi: 3.0.0
+info:
+  title: Social Networking API
+  description: API for a social networking platform supporting both synchronous (REST) and asynchronous (Kafka) communication.
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/BasmalaAmr202202213/SocialNetworkingAPI/1.0.0
+  description: SwaggerHub API Auto Mocking
+- url: https://api.socialnetwork.com
+  description: Production Server
+paths:
+  /users/{userId}:
+    get:
+      summary: Get user profile
+      description: Retrieves the profile of a specific user.
+      operationId: getUserProfile
+      parameters:
+      - name: userId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Successfully retrieved user profile.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+  /posts:
+    post:
+      summary: Create a new post
+      description: Allows a user to create a new post.
+      operationId: createPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/posts_body'
+        required: true
+      responses:
+        "201":
+          description: Post created successfully.
+        "400":
+          description: Bad request.
+  /notifications:
+    get:
+      summary: Get user notifications
+      description: Retrieves notifications for a user.
+      operationId: getUserNotifications
+      parameters:
+      - name: userId
+        in: query
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: List of notifications.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/inline_response_200_1'
+components:
+  schemas:
+    inline_response_200:
+      type: object
+      properties:
+        userId:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+    posts_body:
+      type: object
+      properties:
+        userId:
+          type: string
+        content:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+    inline_response_200_1:
+      type: object
+      properties:
+        notificationId:
+          type: string
+        message:
+          type: string
+        timestamp:
+          type: string
+          format: date-time

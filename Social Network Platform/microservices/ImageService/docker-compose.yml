@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  imageservice:
+    build:
+      context: .
+    ports:
+      - "6000:6000"
+    environment:
+      - MINIO_USE_SSL=false
+      - MINIO_ENDPOINT=minio
+      - MINIO_PORT=9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - MINIO_REGION=me-central-1
+      - MINIO_BUCKETS=user-profiles,post-images,comment-attachments
+      - MINIO_PROFILES_BUCKET=user-profiles
+      - MINIO_POSTS_BUCKET=post-images
+      - MINIO_COMMENTS_BUCKET=comment-attachments
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - minio
+      - redis
+
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+      - USE_SSL=false
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio-data:/data
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  minio-data:

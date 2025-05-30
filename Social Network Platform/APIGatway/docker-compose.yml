@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - JWT_SECRET=your-secret-key
+      - REDIS_ADDR=redis:6379
+    depends_on:
+      - redis
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"

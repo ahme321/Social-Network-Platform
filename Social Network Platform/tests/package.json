@@ -1,0 +1,31 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:unit": "jest --config jest.unit.config.js",
+    "test:unit:watch": "jest --config jest.unit.config.js --watch",
+    "test:unit:coverage": "jest --config jest.unit.config.js --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "axios": "^1.9.0",
+    "jest": "^29.7.0",
+    "minio": "^8.0.5",
+    "mongodb": "^6.16.0",
+    "neo4j-driver": "^5.28.1",
+    "pg": "^8.15.6",
+    "redis": "^5.0.1",
+    "supertest": "^7.1.1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "google-auth-library": "^9.15.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.2"
+  }
+}
